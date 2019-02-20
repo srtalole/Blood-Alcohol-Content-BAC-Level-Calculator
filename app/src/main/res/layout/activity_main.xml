@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/textViewWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="77dp"
+        android:text="@string/textViewWeight"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textViewWeight"
+        android:layout_marginEnd="169dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:digits="0123456789."
+        android:ems="10"
+        android:hint="Enter weight"
+
+        android:inputType="number" />
+
+    <Switch
+        android:id="@+id/switchGender"
+        android:layout_width="112dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textViewWeight"
+        android:layout_marginEnd="46dp"
+        android:buttonTint="@android:color/holo_blue_light"
+        android:checked="true"
+        android:foregroundTint="@android:color/holo_blue_light"
+        android:showText="true"
+        android:text="@string/switchGender"
+        android:textOff="F"
+        android:textOn="M"
+        android:thumbTint="@android:color/holo_blue_light"
+        android:track="@android:color/darker_gray"
+        />
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="142dp"
+        android:text="@string/btnSave"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textDrink"
+        android:layout_width="78dp"
+        android:layout_height="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textViewWeight"
+        android:layout_marginTop="220dp"
+        android:text="Drink Size" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radioGroup"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textDrink"
+        android:layout_marginEnd="37dp"
+        android:checkedButton="@id/radioBtnSize1"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioBtnSize1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:buttonTint="@android:color/holo_blue_light"
+            android:text="@string/radioSize1" />
+
+        <RadioButton
+            android:id="@+id/radioBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="@string/radioSize2"
+            android:textColorLink="@android:color/background_light"
+            tools:buttonTint="@android:color/holo_blue_light"
+            tools:textColorLink="@android:color/background_light" />
+
+        <RadioButton
+            android:id="@+id/radioBtnSize3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:buttonTint="@android:color/holo_blue_light"
+            android:text="@string/radioSize3" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textalchohol"
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textDrink"
+        android:layout_alignStart="@+id/textDrink"
+        android:layout_centerVertical="true"
+        android:text="@string/textViewAlcohol" />
+
+    <SeekBar
+        android:id="@+id/simpleSeekBar"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextWeight"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="-52dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:foregroundTint="@android:color/darker_gray"
+        android:max="25"
+        android:progress="5"
+        android:buttonTint="@color/colorPrimaryDark"
+        android:progressTint="@android:color/holo_blue_light"
+        android:progressBackgroundTint="@android:color/darker_gray"
+        android:min="5"
+        />
+
+    <TextView
+        android:id="@+id/textViewAlcPer"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/switchGender"
+        android:layout_centerVertical="true"
+        android:text="@string/textViewAlcPer" />
+
+    <Button
+        android:id="@+id/btnAddDrink"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnSave"
+        android:layout_marginBottom="193dp"
+        android:text="@string/btnAddDrink" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/switchGender"
+        android:layout_alignTop="@+id/btnAddDrink"
+        android:text="@string/btnReset" />
+
+    <TextView
+        android:id="@+id/textBac"
+        android:layout_width="314dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="127dp"
+        android:text="@string/textViewLev"
+        android:textAlignment="center" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="305dp"
+        android:layout_height="31dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="82dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="@android:color/holo_blue_light"
+        android:progressBackgroundTint="@android:color/darker_gray"
+
+        />
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="100dp"
+        android:layout_height="34dp"
+        android:layout_alignTop="@+id/textViewStatusVal"
+        android:layout_toStartOf="@+id/btnReset"
+        android:text="@string/textViewStatus"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textViewStatusVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/simpleSeekBar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="29dp"
+        android:background="@color/yourStatusGreen"
+        android:text="@string/textViewStatusVal"
+        android:textAlignment="center" />
+
+
+</RelativeLayout>
